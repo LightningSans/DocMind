@@ -1,0 +1,64 @@
+# ============================================
+# DocMind 项目 — Git 忽略规则
+# 适用于 project_end/ 根目录
+# ============================================
+
+# ---------- 环境变量与密钥 (敏感信息) ----------
+docmind/.env
+
+# ---------- Python ----------
+# 虚拟环境
+docmind/.venv/
+.venv/
+venv/
+env/
+
+# Python 字节码缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python 包构建
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+*.tar.gz
+*.so
+
+# ---------- Node.js / Vue 前端 ----------
+project_fronted_vue/node_modules/
+project_fronted_vue/dist/
+
+# ---------- 运行时数据 (不纳入版本控制) ----------
+# 用户上传的文档
+docmind/uploads/
+
+# 对话历史记录
+docmind/conversations/
+
+# 日志文件
+*.log
+logs/
+
+# ---------- IDE 编辑器配置 ----------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---------- 操作系统文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ---------- 其他 ----------
+# 临时文件
+*.tmp
+*.temp

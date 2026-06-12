@@ -1,0 +1,132 @@
+/* ========================================
+   DocMind — Element Plus 主题覆盖 & 全局样式
+   ======================================== */
+
+:root {
+  --docmind-primary: #d97706;
+  --docmind-primary-light: #f59e0b;
+  --docmind-primary-dark: #b45309;
+  --docmind-bg: #0d0d14;
+  --docmind-bg-secondary: #14141f;
+  --docmind-bg-surface: #1a1a28;
+  --docmind-bg-elevated: #20203a;
+  --docmind-text: #ece8e0;
+  --docmind-text-secondary: #8b8694;
+  --docmind-text-muted: #5c5768;
+  --docmind-border: rgba(255, 255, 255, 0.05);
+  --docmind-border-light: rgba(255, 255, 255, 0.08);
+  --docmind-radius: 10px;
+}
+
+/* Element Plus CSS 变量覆盖 */
+html.dark {
+  /* 这里保留亮/暗切换能力，本例使用固定暗色 */
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--docmind-bg);
+  color: var(--docmind-text);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#app {
+  height: 100vh;
+}
+
+/* 覆盖 Element Plus 暗色变量 */
+.el-menu {
+  --el-menu-bg-color: transparent !important;
+  --el-menu-text-color: var(--docmind-text-secondary) !important;
+  --el-menu-active-color: var(--docmind-primary-light) !important;
+  --el-menu-hover-bg-color: var(--docmind-bg-surface-hover, rgba(255,255,255,0.04)) !important;
+  --el-menu-item-height: 44px !important;
+}
+
+.el-dialog {
+  --el-dialog-bg-color: var(--docmind-bg-surface) !important;
+  --el-dialog-border-color: var(--docmind-border-light) !important;
+  --el-text-color-primary: var(--docmind-text) !important;
+  --el-border-color: var(--docmind-border) !important;
+  border: 1px solid var(--docmind-border-light);
+  border-radius: 16px !important;
+}
+
+.el-form-item__label {
+  color: var(--docmind-text-secondary) !important;
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  background-color: var(--docmind-bg) !important;
+  border: 1px solid var(--docmind-border) !important;
+  box-shadow: none !important;
+}
+
+.el-input__wrapper.is-focus,
+.el-textarea__inner:focus {
+  border-color: var(--docmind-primary) !important;
+  box-shadow: 0 0 0 1px var(--docmind-primary) !important;
+}
+
+.el-input__inner {
+  color: var(--docmind-text) !important;
+}
+
+.el-table {
+  --el-table-bg-color: transparent !important;
+  --el-table-tr-bg-color: transparent !important;
+  --el-table-header-bg-color: var(--docmind-bg-secondary) !important;
+  --el-table-row-hover-bg-color: var(--docmind-bg-surface-hover, rgba(255,255,255,0.03)) !important;
+  --el-table-border-color: var(--docmind-border) !important;
+  --el-table-text-color: var(--docmind-text) !important;
+  --el-table-header-text-color: var(--docmind-text-secondary) !important;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--docmind-primary) !important;
+  --el-button-border-color: var(--docmind-primary) !important;
+  --el-button-hover-bg-color: var(--docmind-primary-light) !important;
+  --el-button-hover-border-color: var(--docmind-primary-light) !important;
+  --el-button-text-color: #0d0d14 !important;
+  font-weight: 600 !important;
+}
+
+.el-button--primary.is-disabled {
+  opacity: 0.5;
+}
+
+.el-tag--danger {
+  --el-tag-bg-color: rgba(239, 68, 68, 0.12) !important;
+  --el-tag-border-color: rgba(239, 68, 68, 0.2) !important;
+  --el-tag-text-color: #ef4444 !important;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--docmind-border-light);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--docmind-text-muted);
+}
+
+/* 页面过渡 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
